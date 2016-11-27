@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Magic Cube Timer</title>
+	<style type="text/css" media="screen">
+		body{
+			background-color: #333;
+			color: #f8f8f8;
+			text-align: center;
+		}
+		h1{
+			font-size: 60px;
+		}
+		#timer{
+			font-size: 11em;
+			margin: 50px auto;
+			text-align: center;
+			font-weight: bold;
+		}
+		#timer span{
+			margin: 0 10px;
+		}
+		#history{
+			border: 1px solid #ccc;
+			width: 1000px;
+			margin: 0 auto;
+			border-collapse: collapse;
+		}	
+		#history td,#history th{
+			border: 1px solid #ccc;
+			height: 30px;
+			padding: 5px;
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript" src="magic_cube_timer.js"></script>
+</head>
+<body>
+	<div id="main">
+		<h1>Magic Cube Timer</h1>
+		<div id="timer">
+			<span id="min">00</span> :
+			<span id="sec">00</span> .
+			<span id="ms">00</span>
+		</div>
+
+		<table id="history">
+			<col width="10%" />
+			<col width="10%" />
+			<col width="10%" />
+			<col width="10%" />
+			<col width="10%" />
+			<col width="10%" />
+			<col width="10%" />
+			<col width="10%" />
+			<col width="10%" />
+			<col width="10%" />
+			<thead>
+				<tr>
+					<th>1</th>
+					<th>2</th>
+					<th>3</th>
+					<th>4</th>
+					<th>5</th>
+					<th>6</th>
+					<th>7</th>
+					<th>8</th>
+					<th>9</th>
+					<th>10</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+		<div id="result">
+			<p>Fast： <span id="fast"></span></p>
+			<p>Slowest： <span id="slowest"></span></p>
+			<p>Average： <span id="average"></span></p>
+		</div>
+		<h6>( " SPACE " to START )</h6>
+
+	</div>
+</body>
+</html>
