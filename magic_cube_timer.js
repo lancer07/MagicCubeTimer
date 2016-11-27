@@ -9,18 +9,25 @@ function MagicCubeTimer(){
 		this.bindEvent();
 	}
 
+	timer.times = function(){
+		if (times % 3 == 0) {
+			timer.start();
+		}else if(times % 3 == 1){
+			timer.stop();
+		}else{
+			timer.zero();
+		}
+		times ++;
+	}
+
 	timer.bindEvent = function(){	
 		document.onkeypress = function(e){
 			if (e.keyCode == 32){
-				if (times % 3 == 0) {
-					timer.start();
-				}else if(times % 3 == 1){
-					timer.stop();
-				}else{
-					timer.zero();
-				}
-				times ++;
+				timer.times()
 			}
+		}
+		document.getElementById('main').onclick = function(){
+			timer.times();
 		}
 	}
 
