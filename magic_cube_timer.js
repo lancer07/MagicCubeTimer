@@ -26,7 +26,7 @@ function MagicCubeTimer(){
 				timer.times()
 			}
 		}
-		document.getElementsByTagName('body')[0].onclick = function(){
+		document.querySelector("body").onclick = function(){
 			timer.times();
 		}
 	}
